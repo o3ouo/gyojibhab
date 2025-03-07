@@ -1,0 +1,317 @@
+@import url("./reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+.cormorant-infant-medium {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.cormorant-infant-bold {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.noto-sans-kr-Regular {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.noto-sans-kr-Midium {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+    /* menu transition */
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+}
+.stick{
+    background-color: #111111;
+    width: 32px;
+    height: 3px;
+    border-radius: 3px;
+}
+.stick:nth-child(1){
+    transform-origin: 1px 2px;
+}
+.stick:nth-child(2){
+    transform-origin: 50% 50%;
+    margin-top: 8px;
+}
+.stick:nth-child(3){
+    transform-origin: 0 1px;
+    margin-top: 8px;
+}
+
+.transition .stick{
+    transition: all 0.3s;
+}
+.transition.close .stick:nth-child(1){
+    transform: rotate(45deg);
+    width: 32px;
+}
+.transition.close .stick:nth-child(2){
+    transform: scale(0.01);
+}
+.transition.close .stick:nth-child(3){
+    transform: rotate(-45deg);
+    width: 32px;
+}
+
+
+    /* menu */
+.menu-box{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background: #ffffff;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.main-box{
+    margin-top: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2DA0FA;
+}
+.sub-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #4F4F4F;
+}
+    /* /menu */
+
+
+    /* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 999;
+}
+header .container{
+    max-width: 1780px;
+    height: 100%;
+    padding: 0 1rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-logo img{
+    width: 40px;
+}
+header h1 .logo-name{
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .nav-menu{
+    display: flex;
+    gap: 3rem;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+header .nav-menu .pick{
+    font-weight: 700;
+    color: #2DA0FA;
+}
+
+header .nav-info{
+    display: flex;
+    gap: 1rem;
+}
+header .nav-info a{
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #767676;
+}
+
+header .nav-icon{
+    display: none;
+}
+    /* /header */
+
+
+    /* section-1 */
+.section-1{
+    width: 100%;
+    margin-top: 4.375rem;
+}
+.section-1 .container{
+    max-width: 1480px;
+    margin: auto;
+    padding: 6.25rem 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.section-1 .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10rem;
+}
+.section-1 .left h2{
+    align-self: flex-end;
+}
+.section-1 .left .t-1{
+    align-self: center;
+    font-size: 1.5rem;
+    letter-spacing: -0.025em;
+    line-height: 170%;
+    color: #111111;
+}
+.section-1 .left .t{
+    align-self: flex-start;
+    letter-spacing: -0.025em;
+    line-height: 200%;
+}
+.section-1 .left .t p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+    /* /section-1 */
+
+
+    /* sectin-2 */
+.section-2{
+    width: 100%;
+    margin-top: 6.25rem;
+}
+.section-2 .container{
+    max-width: 1480px;
+    margin: auto;
+    padding: 6.25rem 1rem;
+}
+.section-2 h3{
+    margin-bottom: 2rem;
+    text-align: end;
+}
+
+.section-2 .contents{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.section-2 .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-2 .text .t{
+    padding: 1rem 0;
+    border-bottom: 1px solid #F1F1F5;
+}
+.section-2 h4{
+    margin-bottom: 0.75rem;
+}
+.section-2 p{
+    line-height: 170% ;
+    letter-spacing: -0.035rem;
+}
+    /* /sectin-2 */
+
+
+    /* section-3 */
+.section-3{
+    width: 100%;
+    margin-top: 6.25rem;
+}
+.section-3 .container{
+    max-width: 1480px;
+    padding: 6.25rem 1rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.section-3 h3{
+    line-height: 180%;
+}
+.section-3 p{
+    letter-spacing: -0.025em;
+    line-height: 200%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    
+}
+    /* /section-3 */
+
+
+    /* footer */
+footer{
+    width: 100%;
+    margin-top: 6.25rem;
+    border-top: 1px solid #2DA0FA;
+}
+footer .container{
+    max-width: 1780px;
+    padding: 6.25rem 1rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .f-1{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+footer .f-1 h5{
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: -0.025em;
+    color: #111111;
+}
+
+footer .f-2{
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+footer p{
+    font-size: 0.75rem;
+    letter-spacing: -0.025em;
+    color: #767676;
+    margin-bottom: 0.5rem;
+}
+
+footer .logo{
+    width: 40px;
+}
+    /* /footer */

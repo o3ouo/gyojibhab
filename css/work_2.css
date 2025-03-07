@@ -1,0 +1,79 @@
+@media screen and (max-width:1280px){
+    .work .container{
+        flex-wrap: wrap;
+    }
+
+    .box{
+        width: 50%;
+    }
+
+    .bg::after{
+        background: transparent;
+    }
+    
+    .bg{
+        pointer-events: none;
+    }
+    
+    .work h3{
+        color: #ffffff;
+    }
+
+
+    
+    /* .marine.change::after{
+        background-image: url(../image/work5.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .hojae.change::after{
+        background-image: url(../image/work6.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .briller.change::after{
+        background-image: url(../image/work7.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .bonaebom.change::after{
+        background-image: url(../image/work8.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    } */
+
+}
+
+@media screen and (max-width:991px){
+
+    /* header */
+    header .nav-menu, header .nav-info{
+        display: none;
+    }
+
+    header .nav-icon{
+        display: block;
+    }
+    /* /header */
+
+
+}
+
+@media screen and (max-width:767px){
+
+}
+
+@media screen and (max-width:575px){
+    .work .container{
+        flex-direction: column;
+    }
+    .box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:430px){}
+

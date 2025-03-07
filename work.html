@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교집합_Work</title>
+    <link rel="stylesheet" href="css/work.css">
+    <link rel="stylesheet" href="css/work_2.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/work.js"></script>
+</head>
+<body>
+    <div id="wrap" style="width: 100%;">
+
+        <!-- header -->
+        <header style="background-color: rgba(255, 255, 255, .2);">
+            <div class="container">
+
+                <h1 class="nav-logo">
+                    <a href="index.html">
+                        <figure><img src="image/logo.png" alt="logo"></figure>
+                        <span class="logo-name">교집합</span>
+                    </a>
+                </h1>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="season.html">Season</a></li>
+                    <li class="pick"><a href="work.html">Work</a></li>
+                    <li><a href="index.html">Store</a></li>
+                    <li><a href="index.html">Q&A</a></li>
+                </ul>
+
+                <div class="nav-info">
+                    <a href="#">Login</a>
+                    <a href="#">Sing up</a>
+                    <a href="#">Cart</a>
+                </div>
+
+                <div class="nav-icon">
+                    <a href="#" class="menu transition">
+                        <span class="stick"></span>
+                        <span class="stick"></span>
+                        <span class="stick"></span>
+                    </a>
+                </div>
+
+                <!-- <div class="nav-icon">
+                    <a href="#">
+                        <figure><img src="image/menu_icon.png" alt="menu_icon"></figure>
+                    </a>
+                </div> -->
+                
+            </div>
+        </header>
+        <!-- /header -->
+        
+        <!-- menu -->
+        <div class="menu-box">
+            <ul class="main-box">
+                <li>
+                    <a href="index.html">Main</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="season.html">Season</a>
+                </li>
+                <li>
+                    <a href="work.html">Work</a>
+                </li>
+                <li>
+                    <a href="#">Store</a>
+                </li>
+                <li>
+                    <a href="#">Q&A</a>
+                </li>
+            </ul>
+            <ul class="sub-box">
+                <li>
+                    <a href="#">Login</a>
+                </li>
+                <li>
+                    <a href="#">Sing up</a>
+                </li>
+                <li>
+                    <a href="#">Cart</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /menu -->
+
+
+        <div class="work">
+            <div class="container">
+                <article class="marine box bg">
+                    <a href="#">
+                        <picture class="img-box">
+                            <source srcset="image/work5.jpg" media="(max-width: 1280px)">
+                            <source srcset="image/work_1.jpg" media="(max-width: 1281px)">
+                            <img src="image/work_1.jpg" alt="work_1">
+                        </picture>
+                        <h3>MARINE</h3>
+                        <p class="t-1">
+                            Marine <br>
+                            Extra collection
+                        </p>
+                    </a>
+                </article>
+    
+                <article class="hojae box bg">
+                    <a href="#">
+                        <picture class="img-box">
+                            <source srcset="image/work6.jpg" media="(max-width: 1280px)">
+                            <source srcset="image/work_2.jpg" media="(max-width: 1281px)">
+                            <img src="image/work_2.jpg" alt="work_2">
+                        </picture>
+                        <h3>HOJAE</h3>
+                        <p class="t-2">
+                            Hojae <br>
+                            Concept work
+                        </p>
+                    </a>
+                </article>
+    
+                <article class="briller box bg">
+                    <a href="#">
+                        <picture class="img-box">
+                            <source srcset="image/work7.jpg" media="(max-width: 1280px)">
+                            <source srcset="image/work_3.jpg" media="(max-width: 1281px)">
+                            <img src="image/work_3.jpg" alt="work_3">
+                        </picture>
+                        <h3>BRILLER</h3>
+                        <p class="t-3">
+                            Briller studio <br>
+                            collaberation
+                        </p>
+                    </a>
+                </article>
+    
+                <article class="bonaebom box bg">
+                    <a href="#">
+                        <picture class="img-box">
+                            <source srcset="image/work8.jpg" media="(max-width: 1280px)">
+                            <source srcset="image/work_4.jpg" media="(max-width: 1281px)">
+                            <img src="image/work_4.jpg" alt="work_4">
+                        </picture>
+                        <h3>BONAEBOM</h3>
+                        <p class="t-4">
+                            Bonaebom <br>
+                            Extra collection
+                        </p>
+                    </a>
+                </article>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            // 추가된 부분
+            duration: 2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    </script>
+
+
+</body>
+</html>
